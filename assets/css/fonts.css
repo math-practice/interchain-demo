@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Diatype";
+  src: url("../fonts/ABCDiatype-Thin.otf") format("opentype");
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("../fonts/ABCDiatype-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("../fonts/ABCDiatype-Regular.otf") format("opentype");
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("../fonts/ABCDiatype-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("../fonts/ABCDiatype-MediumItalic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("../fonts/ABCDiatype-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Diatype";
+  src: url("../fonts/ABCDiatype-BoldItalic.otf") format("opentype");
+  font-style: italic;
+  font-weight: 800;
+}
