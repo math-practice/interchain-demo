@@ -22,6 +22,7 @@ a {
 
 a:hover {
   opacity: 0.6;
+  transition: opacity 0.2s;
 }
 
 p:not(:last-child) {
@@ -134,7 +135,7 @@ ul li.inline-block:not(:last-child) {
 .p-s3 { padding-bottom: 48px; }
 .p-s4 { padding-bottom: 96px; }
 
-/*margin */
+/* margin */
 .m-s { margin-bottom: 16px; } 
 .m-s2 { margin-bottom: 24px; }
 .m-s3 { margin-bottom: 48px; }
@@ -145,8 +146,14 @@ ul li.inline-block:not(:last-child) {
 .r-s { border-bottom: 1px solid; }
 .r-e { border-right: 0; }
 @media all and (min-width: 768px) { .r-e { border-right: 1px solid; } }
+.r-w { border-left: 0; }
+@media all and (min-width: 768px) { .r-w { border-left: 1px solid; } }
 
 /* COMPONENTS */
+
+.logo {
+  padding-top: 2px;
+}
 
 /* blocks */
 .block {
@@ -197,19 +204,19 @@ nav a:hover {
   opacity: 1;
 }
 nav .block {
-  animation: slide 0.5s linear infinite;
+  animation: slide 0.75s linear infinite;
 }
 @keyframes slide {
   0% { background-position-y: 0; }
-  100% { background-position-y: 8px; }
+  100% { background-position-y: 12px; }
 }
 nav .block .c-white:hover,  
 nav .block .c-white.current { 
-  background-image: url( '../svg/stripe-w.svg' ); 
+  background-image: url( '../svg/stripe-12-w.svg' ); 
 }
 nav .block .c-black:hover,
 nav .block .c-black.current { 
-  background-image: url( '../svg/stripe-b.svg' ); 
+  background-image: url( '../svg/stripe-12-b.svg' ); 
 }
 nav .block .no-bgimg:hover { 
   background-image: none; 
