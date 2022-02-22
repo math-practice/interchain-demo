@@ -8,3 +8,8 @@ $("#close").click(function(){
   $("#close").hide();
   $("#open").show();
 });
+$("nav .block a").hover(function(){
+    $(this).parent().addClass('hover');
+  }, function() {
+    $(this).parent().removeClass('hover');
+  })
