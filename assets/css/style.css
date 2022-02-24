@@ -8,3 +8,15 @@
     -webkit-font-smoothing: antialiased;
   }
 }
+@layer components {
+  .section { @apply flex flex-wrap max-w-screen-xl w-screen }
+  .section-side { @apply grow border-b }
+  .box { @apply block w-full px-4 py-3.5 bg-white text-black border-black border-b }
+  .box p:not(:last-child) { @apply mb-[1em] }
+  .box p a { @apply border-b border-inherit}
+  .box ul > li:not(:last-child) { @apply mb-[0.25em] }
+}
+@layer utilities {
+  .color-white { @apply bg-white text-black border-black }
+  .color-black { @apply bg-black text-white border-white }
+}
