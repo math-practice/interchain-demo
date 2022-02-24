@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
+@layer base {
   html {
     font-family: Diatype, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
-} */
+}
