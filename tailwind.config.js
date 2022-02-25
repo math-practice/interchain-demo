@@ -17,7 +17,24 @@ module.exports = {
         wordSpacing: '0.01em',
       }],
     },
-    extend: {},
+    extend: {
+      colors: {
+        'beige': '#EFEBE2',
+      },
+      animation: {
+        'slide': 'slide 0.75s linear infinite',
+      },
+      keyframes: {
+        slide: {
+            '0%': {
+              backgroundPositionY: '0'
+            },
+            '100%': {
+              backgroundPositionY: '8px'
+            },
+        }
+      },
+    },
   },
   plugins: [],
 }
