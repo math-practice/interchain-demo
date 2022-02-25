@@ -7,16 +7,27 @@
     font-family: Diatype, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
+  p:not(:last-child) { @apply mb-[1em] }
+  p a { @apply border-b border-current }
+  ul > li:not(:last-child) { @apply mb-[0.25em] }
 }
 @layer components {
   .section { @apply flex flex-wrap max-w-screen-xl w-screen }
   .section-side { @apply grow border-b }
-  .box { @apply block w-full px-4 py-3.5 bg-white text-black border-black border-b }
-  .box p:not(:last-child) { @apply mb-[1em] }
-  .box p a { @apply border-b border-inherit}
-  .box ul > li:not(:last-child) { @apply mb-[0.25em] }
+  .box { @apply block relative w-full px-4 py-3 bg-current text-current border-current border-b 
+        min-h-[100vw] max-h-96 sm:h-auto sm:min-h-[50vh] }
+  .box-full-height { @apply sm:h-full max-h-max }
+  .box-align-center { @apply flex justify-center items-center text-center }
+  .box-align-bottom { @apply flex items-end }
+  .box-content-align-bottom { @apply absolute bottom-0 pb-3 }
+  .box-excerpt { @apply w-1/4 min-w-[240px] border-b-0 pl-8 }
+  .box-excerpt > p, .box-excerpt > h3 { @apply lg:pr-8 }
+  .box-excerpt > figure { @apply w-44 h-44 mt-4 mb-8 bg-gray-500 opacity-50 rounded-full }
+  nav .box, footer .box { @apply h-auto min-h-0 }
+  a.arrowed { @apply inline-block before:content-['->'] before:pr-2 before:font-normal -indent-[1.2em] pl-[1.2em] }
 }
 @layer utilities {
   .color-white { @apply bg-white text-black border-black }
+  .color-beige { @apply bg-[#EFEBE2] text-black border-black }
   .color-black { @apply bg-black text-white border-white }
 }
