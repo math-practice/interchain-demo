@@ -3,7 +3,9 @@ module.exports = {
   theme: {
     fontSize: {
       sm: ['14.5px', {
-        lineHeight: '1.15',
+        lineHeight: '1.2',
+        letterSpacing: '0.01em',
+        wordSpacing: '0.01em',
       }],
       base: ['18px', {
         lineHeight: '1.2',
@@ -12,14 +14,16 @@ module.exports = {
         lineHeight: '1.2',
       }],
       xl: ['36px', {
-        lineHeight: '1',
-        letterSpacing: '0.01em',
-        wordSpacing: '0.01em',
+        lineHeight: '1.1',
       }],
     },
     extend: {
       colors: {
         'beige': '#EFEBE2',
+      },
+      padding: {
+        '10%': '10%',
+        '15%': '15%',
       },
       animation: {
         'slide': 'slide 0.75s linear infinite',

@@ -7,8 +7,8 @@
     font-family: Diatype, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  a { @apply hover:opacity-60 transition-opacity}
-  p:not(:last-child) { @apply mb-[1em] }
+  a { @apply hover:opacity-60 transition-opacity transition-colors}
+  p:not(:last-child), ul:not(:last-child) { @apply mb-[1em] }
   p a { @apply border-b border-current }
   ul > li:not(:last-child) { @apply mb-[0.25em] }
 }
@@ -20,16 +20,25 @@
   .section-side { @apply grow border-b }
   /* box: to be inserted into sections, with proper padding and border bottom  */
   .box { @apply block relative w-full px-4 py-3 bg-current text-current border-current border-b }
-  .box-set-height { @apply min-h-[100vw] sm:min-h-[384px]  }
-  .box-full-height { @apply sm:h-full max-h-max }
-  .box-align-center { @apply flex justify-center items-center text-center }
-  .box-align-bottom { @apply flex items-end }
-  .box-content-align-bottom { @apply absolute bottom-0 pb-3 }
   .box-excerpt { @apply w-1/4 min-w-[240px] border-b-0 pl-8 }
   .box-excerpt > p, .box-excerpt > h3 { @apply lg:pr-8 xl:w-5/6}
   .box-excerpt > figure { @apply w-44 h-44 mt-4 mb-8 bg-gray-500 opacity-50 rounded-full }
   /* link */
-  a.arrowed { @apply inline-block before:content-['->'] before:pr-2 before:font-normal -indent-[1.2em] pl-[1.2em] }
+  .arrowed { @apply inline-block before:content-['->'] before:pr-2 before:font-normal -indent-[1.2em] pl-[1.2em] }
+  /* buttons */
+  .btn { @apply block relative border-current border-x border-b 
+          first-of-type:border-t
+          after:content-['->'] after:absolute after:right-[0.5em] after:font-thin
+          hover:opacity-100 font-medium
+  }
+  /* profile */
+  .profile { @apply w-1/2 sm:w-32 pb-4}
+  .profile > figure { @apply w-24 h-24 bg-gray-200 rounded-full border border-black mt-4 mb-2 }
+  .profile p { @apply pl-2}
+  /* logos */
+  .logo { @apply w-1/2 lg:w-1/3 pr-8 pb-8}
+  .logo > span { @apply block h-32 bg-gray-500 opacity-50 rounded-full }
+  
 }
 @layer utilities {
   .color-white { @apply bg-white text-black border-black selection:text-beige selection:bg-black }
@@ -37,4 +46,14 @@
   .color-black { @apply bg-black text-white border-white selection:text-black selection:bg-beige}
   .hatch-white { @apply bg-[url('assets/svg/stripe-8-b.svg')] animate-slide }
   .hatch-black { @apply bg-[url('assets/svg/stripe-8-w.svg')] animate-slide }
+  .list-bullet li { @apply before:content-['–'] before:pr-2 before:font-normal -indent-[0.925em] pl-[0.925em]}
+  .box-set-height { @apply min-h-[100vw] sm:min-h-[384px]  }
+  .box-full-height { @apply sm:h-full max-h-max }
+  .box-align-center { @apply flex justify-center items-center text-center }
+  .box-align-bottom { @apply flex items-end }
+  .box-content-align-bottom { @apply absolute bottom-0 pb-3 }
+  .btn-xl { @apply pl-4 pr-16 py-4 text-xl font-medium}
+  .btn-lg { @apply pl-4 pr-16 py-3 text-lg font-normal lg:max-w-[50%] }
+  .btn-corner { @apply w-full sm:border-l-0 sm:border-b-0 sm:-ml-4 sm:-mb-3 }
+  .btn-half { @apply w-full sm:w-1/2 }
 }
