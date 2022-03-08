@@ -1,4 +1,7 @@
+# IGDemo
+
 # Init
+
 - ~~`npm init -y`~~
 - `npm install -D tailwindcss postcss autoprefixer vite`
 - From `pakage.json`, inside `scripts` put `"dev": "vite"`

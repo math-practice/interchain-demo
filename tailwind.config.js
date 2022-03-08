@@ -2,46 +2,58 @@ module.exports = {
   content: ["./*.{html,js}"],
   theme: {
     fontSize: {
-      sm: ['14.5px', {
-        lineHeight: '1.2',
-        letterSpacing: '0.01em',
-        wordSpacing: '0.01em',
-      }],
-      base: ['18px', {
-        lineHeight: '1.2',
-      }],
-      lg: ['21px', {
-        lineHeight: '1.2',
-      }],
-      xl: ['36px', {
-        lineHeight: '1.1',
-      }],
+      sm: [
+        "14.5px",
+        {
+          lineHeight: "1.2",
+          letterSpacing: "0.01em",
+          wordSpacing: "0.01em",
+        },
+      ],
+      base: [
+        "18px",
+        {
+          lineHeight: "1.2",
+        },
+      ],
+      lg: [
+        "21px",
+        {
+          lineHeight: "1.2",
+        },
+      ],
+      xl: [
+        "36px",
+        {
+          lineHeight: "1.1",
+        },
+      ],
     },
     extend: {
       colors: {
-        'beige': '#EFEBE2',
+        beige: "#EFEBE2",
       },
       padding: {
-        '10%': '10%',
-        '15%': '15%',
+        "10%": "10%",
+        "15%": "15%",
       },
       animation: {
-        'slide': 'slide 0.75s linear infinite',
+        slide: "slide 0.75s linear infinite",
       },
       keyframes: {
         slide: {
-            '0%': {
-              backgroundPositionY: '0'
-            },
-            '100%': {
-              backgroundPositionY: '8px'
-            },
-        }
+          "0%": {
+            backgroundPositionY: "0",
+          },
+          "100%": {
+            backgroundPositionY: "8px",
+          },
+        },
       },
     },
   },
   plugins: [],
-}
+};
 
 // .t-xl {
 //   font-size: 36px;
